@@ -15,6 +15,15 @@ export function App() {
 	useEffect(async () => {
 		generateAdvice();
 	}, []);
+	
+		if (!advice)
+		return (
+			<main>
+				<div>
+					<h1>Loading...</h1>
+				</div>
+			</main>
+		);
 
 	return (
 		<>
